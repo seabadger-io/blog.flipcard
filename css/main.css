@@ -1,0 +1,51 @@
+.card .card-details {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.card:focus .card-details,
+.card:hover .card-details {
+  visibility: visible;
+  height: auto;
+  width: auto;
+}
+
+.card:focus .card-text,
+.card:hover .card-text {
+  display: none;
+}
+
+.card-body,
+.card-img-top {
+  transition: all 0.5s ease-out;
+}
+
+.card:focus .card-img-top,
+.card:hover .card-img-top {
+  height: 0;
+}
+
+.card:focus .card-img-top,
+.card:hover .card-img-top,
+.card:focus .card-body,
+.card:hover .card-body {
+  transform: rotateY(180deg);
+}
+
+.card:focus .card-details,
+.card:hover .card-details,
+.card:focus .card-title,
+.card:hover .card-title {
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 450px;
+  }
+  .card-deck .card {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+}
